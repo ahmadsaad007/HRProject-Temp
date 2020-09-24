@@ -1,0 +1,10 @@
+div{
+    padding: 5px;
+}
+.submit{
+    padding: 5px 15px;
+    margin-left: 80%;
+    cursor: pointer;
+    background-color: blue;
+    color: cornsilk;
+}
