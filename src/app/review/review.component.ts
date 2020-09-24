@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewComponent implements OnInit {
 
-  approved: true; //value of whether HR accepts or rejects an application
+  approved: false; //value of whether HR accepts or rejects an application
   
   constructor() { }
 
