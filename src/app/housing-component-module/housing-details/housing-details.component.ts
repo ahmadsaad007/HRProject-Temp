@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-housing-details',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HousingDetailsComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup;
+  constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.form = this.formBuilder.group({
+      houseNumber: this.formBuilder.control('58'),
+      houseStreet: this.formBuilder.control('Shelley Circle'),
+      houseCity: this.formBuilder.control('East Windsor'),
+      houseState: this.formBuilder.control('NJ'),
+      houseZip: this.formBuilder.control('08520')
+    });
+    this.form.get('houseNumber').disable;
   }
 
 }
