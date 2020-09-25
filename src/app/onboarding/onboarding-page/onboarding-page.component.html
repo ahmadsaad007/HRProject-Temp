@@ -166,7 +166,7 @@
 
       <div formArrayName="emergency">
         <h3>Emergency Contacts: </h3> 
-        <a style="cursor: pointer;" (click)="addEmergency()">Add Contact</a>
+        <a style="cursor: pointer; padding: 2px; background-color:gainsboro; text-align: center;" (click)="addEmergency()">Add Contact</a>
       
         <div *ngFor="let alias of emergency.controls; let i=index">
           <!-- The repeated emergnecy template -->
@@ -184,7 +184,7 @@
          
           <label>Contact Relationship:</label>
           <div><input type="text" [formControlName]="e_Relationship"></div>
-          
+          <hr>
         </div>
       </div>
 

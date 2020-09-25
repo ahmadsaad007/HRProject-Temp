@@ -2,20 +2,30 @@
     <p>
         This is the housing detials container:
     </p>
+    <form [formGroup]="form">
+        <div>
+            <label>Address Line 1: </label>
+            <div><input class="houseDetails" type="text" formControlName='houseNumber'></div>
+        </div>
+        <div>
+            <label>Address Line 2: </label>
+            <div><input class="houseDetails" type="text" formControlName='houseStreet'></div>
+        </div>
+        <div>
+            <label>City: </label>
+            <div><input class="houseDetails" type="text" formControlName='houseCity'></div>
+        </div>
+        <div>
+            <label>State: </label>
+            <div><input class="houseDetails" type="text" formControlName='houseState'></div>
+        </div>
+        <div>
+            <label>Zip:</label>
+            <div><input class="houseDetails" type="text" formControlName='houseZip'></div>
+        </div>
 
-    <div>
-        Address Line 1: <input class="houseDetails" type="text" formControlName='houseNumber'>
-    </div>
-    <div>
-        Address Line 2: <input class="houseDetails" type="text" formControlName='houseStreet'>
-    </div>
-    <div>
-        City: <input class="houseDetails" type="text" formControlName='houseCity'>
-    </div>
-    <div>
-        State: <input class="houseDetails" type="text" formControlName='houseState'>
-    </div>
-    <div>
-        Zip: <input class="houseDetails" type="text" formControlName='houseZip'>
-    </div>
+        <!-- <div *ngFor='let employee of employees.controls, index as i'>
+            Employee: <p>{{employee}}</p>
+        </div> -->
+    </form>
 </div>

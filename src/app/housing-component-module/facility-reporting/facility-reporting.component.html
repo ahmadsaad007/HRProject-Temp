@@ -1,1 +1,43 @@
-<p>facility-reporting works!</p>
+<div class="component-container">
+    <div class="reporting-div">
+        <h2>Report Facility </h2>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+            <div>
+                <label for="reportTitle">Title: </label>
+                <div>
+                <input type="text" name="reportTitle" id="reportTitle" formControlName="title">
+                </div>
+            </div>
+            <div>
+                <label for="reportDescription">Description: </label>
+                <div><input type="text" name="reportDescription" id="reportDescription" formControlName="description"></div>
+            </div>
+            <div>
+                <button class='submit' type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="list-div">
+        <form [formGroup]='formList' (ngSubmit)="onSubmit(formList.value)">
+            <div>
+                <tr >
+                    <th><input type="text" disabled='true'>Title</th>
+                    <th><input type="text" disabled='true'>Description</th>
+                    <th><input type="text" disabled='true'>Created By</th>
+                    <th><input type="text" disabled='true'>Date</th>
+                    <th><input type="text" disabled='true'>Status</th>
+                </tr>
+                <tr *ngFor="let element of formList.controls; let i = index" [formGroupName]="i">
+                    <td><input type="text"  [formControlName]="fl_title"></td>
+                    <td><input type="text"  [formControlName]="fl_description"></td>
+                    <td><input type="text"  [formControlName]="fl_created_by"></td>
+                    <td><input type="text"  [formControlName]="fl_date"></td>
+                    <td><input type="text"  [formControlName]="fl_status"></td>
+                </tr> 
+            </div>     
+        </form>
+    </div>
+</div>
+
+
